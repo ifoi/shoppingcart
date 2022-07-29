@@ -2,15 +2,18 @@ import './App.css';
 import Header from './components/Header';
 import Cart from './components/Cart';
 import Shop from './components/Shop';
+import productsData from './productsData';
 
 function App() {
+  const {products} = productsData;
+
   return (
     <div className="App">
 
     <Header></Header>
 
     <div>
-      <Shop></Shop>
+      <Shop products ={products}> </Shop>
       <Cart></Cart>
       
     </div>
