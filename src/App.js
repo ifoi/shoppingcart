@@ -1,38 +1,39 @@
 import './App.css';
-import Header from './components/Header';
+// import Header from './components/Header';
 import Cart from './components/Cart';
 import Shop from './components/Shop';
 import productsData from './productsData';
 
-function App() {
+function App(props) {
   const {products} = productsData;
+  const {addToCart} = props;
+
+  // const addToCart =(product) => {
+  //   const itemExist= cartItems.find[item => item.id === product.id];
+  //   if(itemExist) {
+  //     setCartItems(cartItems.map( (item) => 
+  //               item.id === product.id ? {...item.id, ...itemExist, qty: item.qty + product.qty }
+  //                                      : item )
+  //     );                       
+              
+  //   }else {
+  //     setCartItems([...cartItems, {...product, qty: 1}]);
+  //   }
+
+  // };
+
 
   return (
     <div className="App">
 
-    <Header></Header>
+    {/* <Header></Header> */}
 
-    <div>
-      <Shop products ={products}> </Shop>
-      <Cart></Cart>
-      
-    </div>
+        <div>
+          <Shop products ={products} addToCart ={addToCart}/>
+          <Cart addToCart={addToCart} />           
+        </div>
 
-      {/* <header className="App-header">
-       
-
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
+    
     </div>
   );
 }
