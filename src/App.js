@@ -6,7 +6,7 @@ import productsData from './productsData';
 
 function App(props) {
   const {products} = productsData;
-  const {addToCart} = props;
+  const {cartItems, addToCart} = props;
 
   // const addToCart =(product) => {
   //   const itemExist= cartItems.find[item => item.id === product.id];
@@ -30,7 +30,7 @@ function App(props) {
 
         <div>
           <Shop products ={products} addToCart ={addToCart}/>
-          <Cart addToCart={addToCart} />           
+          <Cart addToCart={addToCart} cartItems={cartItems} />           
         </div>
 
     
