@@ -2,7 +2,7 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-You can see a live demo of the project https://ifoi.github.io/shoppingcart/ 
+You can [click here ](https://ifoi.github.io/shoppingcart) to see a live demo of the project https://ifoi.github.io/shoppingcart/ 
 
 ## Available Scripts
 
